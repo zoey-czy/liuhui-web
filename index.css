@@ -1,0 +1,168 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    margin: 0
+}
+
+div,h1,h2,h3,li,ol,p,ul {
+    margin: 0;
+    padding: 0
+}
+
+.solid {
+    border-bottom: 1px solid #000;
+    padding-bottom: 20px
+}
+
+.text {
+    background-color: #ff0;
+    color: crimson
+}
+
+@media screen and (max-width: 600px) {
+    .per_info {
+        line-height:1.2
+    }
+
+    .per_info * {
+        font-size: 12px!important
+    }
+}
+
+.app {
+    margin: 0 auto;
+    max-width: 980px;
+    padding: 0 24px 100px
+}
+
+.app a:visited {
+    color: #a70468
+}
+
+.app .no_list_style {
+    list-style: none
+}
+
+.app .personal {
+    margin-top: 20px
+}
+
+.app .personal .per_info {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.app .personal .per_info .info_l {
+    margin-right: 20px
+}
+
+.app .personal .per_info .info_l .info_img {
+    height: 180px;
+    width: 190px
+}
+
+.app .personal .per_info .info_r {
+    font-family: Times New Roman,serif;
+    position: relative
+}
+
+.app .personal .per_info .info_r h2 {
+    margin-bottom: 12px
+}
+
+.app .personal .per_info .info_r p {
+    font-size: 21px;
+    font-weight: 700
+}
+
+.app .personal .per_info .info_r p+p {
+    margin-top: 4px
+}
+
+.app .personal .per_info .info_r .bottom {
+    bottom: 0;
+    left: 0
+}
+
+.app .personal .per_des {
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    margin-top: 20px;
+    padding-top: 20px
+}
+
+.app .personal .per_des p {
+    font-size: 18px;
+    margin-bottom: 30px
+}
+
+.app .personal .per_des .weight {
+    font-weight: 700
+}
+
+.app .personal .per_des .strong {
+    color: red;
+    font-weight: 700
+}
+
+.app .students h2 {
+    margin: 12px 0
+}
+
+.app .students ul {
+    list-style: none
+}
+
+.app .students ul li {
+    align-items: center;
+    display: flex
+}
+
+.app .students ul li+li {
+    margin-top: 12px
+}
+
+.app .students ul li img {
+    height: 118px;
+    margin-right: 12px;
+    width: 84px
+}
+
+.app .students ul li .link {
+    color: blue;
+    text-decoration: underline
+}
+
+.app .community h2,.app .former_students h2,.app .teaching h2 {
+    margin: 20px 0
+}
+
+.app .community h3,.app .former_students h3,.app .teaching h3 {
+    margin-bottom: 12px
+}
+
+.app .community ul,.app .former_students ul,.app .teaching ul {
+    padding-left: 40px
+}
+
+.app .community ul li,.app .former_students ul li,.app .teaching ul li {
+    font-size: 16px;
+    margin-bottom: 12px
+}
+
+.app .community .red,.app .former_students .red,.app .teaching .red {
+    color: red
+}
+
+.app .community .bold,.app .former_students .bold,.app .teaching .bold {
+    font-weight: 700
+}
+
+.app .community,.app .teaching {
+    border-top: 1px solid #000;
+    line-height: 25px
+}
+
+

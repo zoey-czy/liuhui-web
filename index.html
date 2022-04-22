@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <title>React App</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <div class="app">
+      <div class="personal">
+        <div class="per_info">
+          <div class="info_l">
+            <img class="info_img" src="./images/image001.jpg" />
+          </div>
+          <div class="info_r">
+            <div>
+              <h2>Hui Liu</h2>
+              <p>Professor</p>
+
+              <p>
+                <a href="https://cs.bit.edu.cn/">School of Computer Science and Technology</a>
+              </p>
+              <p>
+                <a href="https://cs.bit.edu.cn/">Beijing Institute of Technology</a>
+              </p>
+              <p>https://english.bit.edu.cn/</p>
+            </div>
+            <div class="bottom">
+              <p>
+                <a href="mailto:liuhui08@bit.edu.cn">liuhui08@bit.edu.cn</a>
+              </p>
+              <p>Office location: R1206, Central Building</p>
+            </div>
+          </div>
+        </div>
+        <div class="per_des">
+          <p>
+            I am a Professor in the <a href="http://www.cs.bit.edu.cn/">School of Computer Science and Technology</a> at the <a href="https://english.bit.edu.cn/">Beijing Institute of Technology</a> .
+            I was formerly a graduate student at the <a href="http://www.sei.pku.edu.cn/">Software Engineering Institute</a> ,<a href="https://english.pku.edu.cn/">Peking University</a> . I defended
+            my PhD thesis in June 2008.
+          </p>
+          <p>
+            My research interests include deep learning based software engineering, in particular: deep learning based program generation; software refactoring; automatic program repair; software
+            quality; machine learning based code complete; automatic construction of software engineering datasets. My work is funded in part by the National Natural Science Foundation of China, and
+            the National Key Research and Development Program of China.
+          </p>
+          <p>
+            I am a recipient of the RE'2021 best research paper award (2021), IET Software Premium Award (2018), New Century Excellent Talents in University (2013), and Beijing Higher Education Young
+            Elite Teacher (2013). I am also a distinguished member of China Computer Federation (中国计算机学会杰出会员)
+          </p>
+          <p>
+            <span class="weight">I am always looking for self-motivated students to work with me</span> . Contact me by eMail if you are interested in <span class="strong">deep learning</span>{" "}
+            ,<span class="strong">software engineering</span> ,<span class="strong">natural language processing</span> , or <span class="strong">data mining</span> .
+          </p>
+        </div>
+      </div>
+      <div id="studentsHtml"></div>
+      <div class="teaching">
+        <h2>Teaching</h2>
+        <ul>
+          <li>
+            <h3>Graduate Course</h3>
+            <ul>
+              <li>Frontiers of Computer Science, 2014-</li>
+              <li>Software Architecture, 2008-2015</li>
+            </ul>
+          </li>
+          <li>
+            <h3>Undergraduate Courses</h3>
+            <ul>
+              <li>Software Testing, 2010-</li>
+              <li>Object-Oriented Software Design, 2013</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="communityXml"></div>
+    </div>
+  </body>
+</html>
+<script>
+  let studentsHtml = document.querySelector("#studentsHtml");
+  let communityXml = document.querySelector("#communityXml");
+
+  function initStudents() {
+    return fetch("https://zoey-czy.github.io/liuhui/data/students.html")
+      .then((res) => res.text())
+      .then((html) => {
+          studentsHtml.innerHTML=html
+      });
+  }
+  function initCommunity() {
+    return fetch("https://zoey-czy.github.io/liuhui/data/community.xml")
+      .then((res) => res.text())
+      .then((html) => {
+        communityXml.innerHTML=html
+      });
+  }
+  initStudents();
+  initCommunity();
+</script>
